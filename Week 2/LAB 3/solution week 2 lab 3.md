@@ -27,18 +27,18 @@ aws ec2 authorize-security-group-ingress --group-id sg-0de47ccbdb03b755a --ip-pe
 aws ec2 run-instances --image-id ami-a4827dc9 --count 1 --instance-type t2.micro --key-name week2-lab3-key --security-group-ids sg-0de47ccbdb03b755a --subnet-id subnet-0b07a5a5c6e0125ad
 aws ec2 describe-instances --instance-id i-0ad1b951120bb97c7
 
- aws ec2 terminate-instances --instance-ids i-0ad1b951120bb97c7
- aws ec2 terminate-instances --instance-id i-0ef8b75ced946121a
-  aws ec2 delete-security-group --group-id sg-0de47ccbdb03b755a
-[cloudshell-user@ip-10-1-56-101 ~]$ aws ec2 delete-security-group --group-id sg-0bd13ca6c5e577e74
-[cloudshell-user@ip-10-1-56-101 ~]$ aws ec2 delete-subnet --subnet-id subnet-0b07a5a5c6e0125ad
-[cloudshell-user@ip-10-1-56-101 ~]$ aws ec2 delete-subnet --subnet-id subnet-0d05494854a75b87a
-[cloudshell-user@ip-10-1-56-101 ~]$ aws ec2 delete-route-table --route-table-id rtb-085942b2d344ec0ce
-[cloudshell-user@ip-10-1-56-101 ~]$ aws ec2 delete-route-table --route-table-id rtb-080f4e578dc2edb43
-[cloudshell-user@ip-10-1-56-101 ~]$ aws ec2 detach-internet-gateway --internet-gateway-id igw-02d72b194d4496f20 --vpc-id vpc-09db7380650d26cdb
-[cloudshell-user@ip-10-1-56-101 ~]$ aws ec2 delete-internet-gateway --internet-gateway-id igw-02d72b194d4496f20
-[cloudshell-user@ip-10-1-56-101 ~]$ aws ec2 delete-egress-only-internet-gateway --egress-only-internet-gateway-id eigw-05ba28e8b004f65fe
+aws ec2 terminate-instances --instance-ids i-0ad1b951120bb97c7
+aws ec2 terminate-instances --instance-id i-0ef8b75ced946121a
+aws ec2 delete-security-group --group-id sg-0de47ccbdb03b755a
+aws ec2 delete-security-group --group-id sg-0bd13ca6c5e577e74
+aws ec2 delete-subnet --subnet-id subnet-0b07a5a5c6e0125ad
+aws ec2 delete-subnet --subnet-id subnet-0d05494854a75b87a
+aws ec2 delete-route-table --route-table-id rtb-085942b2d344ec0ce
+aws ec2 delete-route-table --route-table-id rtb-080f4e578dc2edb43
+aws ec2 detach-internet-gateway --internet-gateway-id igw-02d72b194d4496f20 --vpc-id vpc-09db7380650d26cdb
+aws ec2 delete-internet-gateway --internet-gateway-id igw-02d72b194d4496f20
+aws ec2 delete-egress-only-internet-gateway --egress-only-internet-gateway-id eigw-05ba28e8b004f65fe
 {
     "ReturnCode": true
 }
-[cloudshell-user@ip-10-1-56-101 ~]$ aws ec2 delete-vpc --vpc-id vpc-09db7380650d26cdb
+aws ec2 delete-vpc --vpc-id vpc-09db7380650d26cdb
